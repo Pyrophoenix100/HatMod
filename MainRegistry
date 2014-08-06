@@ -1,0 +1,96 @@
+package com.hatmod.main;
+
+import com.ftlmod.main.ServerProxy;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+
+
+@Mod(modid = MainRegistry.modid, version = MainRegistry.version, name = MainRegistry.name)
+public class MainRegistry {
+
+	public static final String modid = "hatmod";
+	public static final String version = "Alpha v0.1";
+	public static final String name = "H.A.T Mod";
+
+	//Items
+  //public static Item BlahBlahBlah;
+	
+	
+	public static CreativeTabs HatBase;
+	//Crops
+		//None
+
+	//Fluids
+		//None
+
+	//Machines
+		//None
+
+	
+	@EventHandler
+	public void PreInit(FMLPreInitializationEvent preEvent){
+		
+		HatBase = new CreativeTabs("HatBase") {
+			@SideOnly(Side.CLIENT)
+			public Item getTabIconItem() {
+				return null;
+			}
+		};
+
+
+		//Initializations
+		
+		//Items
+		
+		//Blocks
+		
+		//Tools and Weapons
+		
+		//Fluids
+		
+		//Crafting Tables
+
+		//Registers
+		
+		//Items		
+		
+		//Renderers
+		
+
+	}
+	@SidedProxy(clientSide = "com.hatmod.main.ClientProxy", serverSide = "com.hatmod.main.ServerProxy")
+	public static ServerProxy HatProxy;
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event){
+
+		
+
+
+		//Recipes
+		
+
+		//Entities
+		
+		
+		//Tile Entities
+		
+	}
+
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent postEvent){
+
+	}
+
+
+}
