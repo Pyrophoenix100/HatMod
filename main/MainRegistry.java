@@ -28,7 +28,7 @@ public class MainRegistry {
 	//Items
   //public static Item BlahBlahBlah;
 	public static Item SteelAlloy;
-	
+	public static Item Wax;
 	public static CreativeTabs HatBase;
 	//Crops
 		//None
@@ -55,6 +55,7 @@ public class MainRegistry {
 		
 		//Items
 		SteelAlloy = new com.hatmod.item.SteelAlloy();
+		Wax = new com.hatmod.item.Wax();
 		
 		//Blocks
 		
@@ -68,6 +69,7 @@ public class MainRegistry {
 		
 		//Items		
 		GameRegistry.registerItem(SteelAlloy, "SteelAlloy");
+		GameRegistry.registerItem(Wax, "Wax");
 		
 		//Renderers
 		
@@ -82,8 +84,9 @@ public class MainRegistry {
 		
 
 
-		//Recipess
+		//Recipes
 		GameRegistry.addShapedRecipe(new ItemStack(SteelAlloy, 2), new Object[]{"IC", "CI", 'I', Items.iron_ingot, 'C', Items.coal});
+		GameRegistry.addSmelting(Items.reeds, new ItemStack(Wax), 0);
 
 		//Entities
 		

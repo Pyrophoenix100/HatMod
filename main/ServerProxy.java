@@ -1,5 +1,5 @@
 package com.hatmod.main;
 
-public class ServerProxy{
+public class ServerProxy {
 
 }
