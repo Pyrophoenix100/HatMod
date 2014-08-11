@@ -1,6 +1,6 @@
 package com.hatmod.main;
 
-import com.ftlmod.main.ServerProxy;
+
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -26,7 +26,7 @@ public class MainRegistry {
   //public static Item BlahBlahBlah;
 	
 	
-	public static CreativeTabs HatBase;
+	
 	//Crops
 		//None
 
@@ -40,12 +40,7 @@ public class MainRegistry {
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent){
 		
-		HatBase = new CreativeTabs("HatBase") {
-			@SideOnly(Side.CLIENT)
-			public Item getTabIconItem() {
-				return null;
-			}
-		};
+		
 
 
 		//Initializations
