@@ -3,13 +3,16 @@ package com.hatmod.main;
 
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -24,9 +27,9 @@ public class MainRegistry {
 
 	//Items
   //public static Item BlahBlahBlah;
+	public static Item SteelAlloy;
 	
-	
-	
+	public static CreativeTabs HatBase;
 	//Crops
 		//None
 
@@ -40,12 +43,18 @@ public class MainRegistry {
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent){
 		
-		
+		HatBase = new CreativeTabs("HatBase") {
+			@SideOnly(Side.CLIENT)
+			public Item getTabIconItem() {
+				return MainRegistry.SteelAlloy;
+			}
+		};
 
 
 		//Initializations
 		
 		//Items
+		SteelAlloy = new com.hatmod.item.SteelAlloy();
 		
 		//Blocks
 		
@@ -58,6 +67,7 @@ public class MainRegistry {
 		//Registers
 		
 		//Items		
+		GameRegistry.registerItem(SteelAlloy, "SteelAlloy");
 		
 		//Renderers
 		
@@ -72,8 +82,8 @@ public class MainRegistry {
 		
 
 
-		//Recipes
-		
+		//Recipess
+		GameRegistry.addShapedRecipe(new ItemStack(SteelAlloy, 2), new Object[]{"IC", "CI", 'I', Items.iron_ingot, 'C', Items.coal});
 
 		//Entities
 		
