@@ -29,6 +29,8 @@ public class MainRegistry {
   //public static Item BlahBlahBlah;
 	public static Item SteelAlloy;
 	public static Item Wax;
+	public static Item Sapphire;
+	public static Item Ruby;
 	public static CreativeTabs HatBase;
 	//Crops
 		//None
@@ -56,7 +58,8 @@ public class MainRegistry {
 		//Items
 		SteelAlloy = new com.hatmod.item.SteelAlloy();
 		Wax = new com.hatmod.item.Wax();
-		
+		Ruby = new com.hatmod.item.Ruby();
+		Sapphire = new com.hatmod.item.Sapphire();
 		//Blocks
 		
 		//Tools and Weapons
@@ -68,9 +71,10 @@ public class MainRegistry {
 		//Registers
 		
 		//Items		
-		GameRegistry.registerItem(SteelAlloy, "SteelAlloy");
-		GameRegistry.registerItem(Wax, "Wax");
-		
+		GameRegistry.registerItem(SteelAlloy, "SteelAlloy", MainRegistry.name);
+		GameRegistry.registerItem(Wax, "Wax", MainRegistry.name);
+		GameRegistry.registerItem(Ruby, "Ruby", MainRegistry.name);
+		GameRegistry.registerItem(Sapphire, "Sapphire", MainRegistry.name);
 		//Renderers
 		
 
